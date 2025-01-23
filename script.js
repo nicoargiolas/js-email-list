@@ -19,6 +19,7 @@ for (let i = 0; i < emailN; i++) {
         // emailListHTML.innerHTML += `<li> ${mail} </li>`
         emailList.push(mail);
         if (emailList.length === emailN) {
+            emailListHTML.innerHTML = "";
             console.log(emailList);
             for (let i = 0; i < emailN; i++) {
                 emailListHTML.innerHTML += `<li> ${emailList[i]} </li>`
@@ -35,7 +36,7 @@ let emailNumber = 10;
 getNEmails(emailNumber);
 
 resetButtonHTML.addEventListener("click", () => {
-    emailListHTML.innerHTML = "";
+    // emailListHTML.innerHTML = "";
     getNEmails(emailNumber);
 });
 
